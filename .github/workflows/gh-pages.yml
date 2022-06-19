@@ -30,6 +30,6 @@ jobs:
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.WORKFLOW_GITHUB_TOKEN }}
         publish_dir: dist/hello-world
         enable_jekyll: true
