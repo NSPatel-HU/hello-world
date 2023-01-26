@@ -1,6 +1,6 @@
 node {
     stage('Checkout SCM'){
-        git branch:'master', url:'https://github.com/NSPatel-HU/hello-world.git'
+        git branch:'jenkins_test', url:'https://github.com/NSPatel-HU/hello-world.git'
     }
 
     stage('Install node modules'){
