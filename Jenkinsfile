@@ -8,7 +8,7 @@ node {
     }
 
     stage('Test'){
-        bat "npm run test:headless --code-coverage"
+        bat "npx ng test --browsers ChromeHeadless --no-watch --code-coverage"
     }
 
     stage('Scan'){
