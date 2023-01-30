@@ -12,7 +12,7 @@ node {
     }
 
     stage('Scan'){
-        steps{
+        step{
             withSonarQubeEnv('installationName: sq1'){
                 bat "npm run sonar"
             }
