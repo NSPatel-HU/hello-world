@@ -8,7 +8,16 @@ node {
     }
 
     stage('Test'){
-        bat "npm run test:headless"    //"npm run test-headless"
+        bat "npm run test:headless --code-coverage"
+    }
+
+    stage('Scan'){
+        steps{
+            withSonarQubeEnv('installationName: sq1'){
+                bat "npm run sonar"
+            }
+
+        }
     }
 
     stage('Build'){
