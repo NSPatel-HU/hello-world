@@ -1,4 +1,7 @@
 node {
+
+    tools {nodejs "NodeJS"}
+
     stage('Checkout SCM'){
         git branch:'jenkins_test', url:'https://github.com/NSPatel-HU/hello-world.git'
     }
