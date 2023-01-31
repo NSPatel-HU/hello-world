@@ -19,12 +19,7 @@ node {
     }
 
     stage('Scan'){
-        steps{
-            withSonarQubeEnv('installationName: sq1'){
-                sh "npm run sonar"
-            }
-
-        }
+        sh "sonar-scanner"
     }
 
     stage('Build'){
