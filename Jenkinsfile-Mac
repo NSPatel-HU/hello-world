@@ -1,5 +1,11 @@
 node {
 
+    env.NODEJS_HOME = "${tool 'Node 18.x'}"
+    // on linux / mac
+    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+    
+    sh 'npm --version'
+
     stage('Checkout SCM'){
         git branch:'jenkins_test', url:'https://github.com/NSPatel-HU/hello-world.git'
     }
