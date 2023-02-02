@@ -19,7 +19,7 @@ node {
     }
 
     stage('Scan'){
-        sh "sonar-scanner"
+        sh "npm run sonar"
     }
 
     stage('Build'){
