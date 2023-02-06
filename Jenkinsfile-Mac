@@ -15,7 +15,7 @@ node {
     }
 
     stage('Test'){
-        sh "npx ng test --browsers ChromeHeadless --no-watch --code-coverage"
+        sh "npm run test:headless"
     }
 
     stage('Scan'){
@@ -23,7 +23,7 @@ node {
     }
 
     stage('Build'){
-        sh "npm run build --prod"
+        sh "npm run build:prod"
     }
 
     

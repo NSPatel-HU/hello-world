@@ -8,20 +8,15 @@ node {
     }
 
     stage('Test'){
-        bat "npx ng test --browsers ChromeHeadless --no-watch --code-coverage"
+        bat "npm run test:headless"
     }
 
     stage('Scan'){
-        steps{
-            withSonarQubeEnv('installationName: sq1'){
-                bat "npm run sonar"
-            }
-
-        }
+        sh "npm run sonar"
     }
 
     stage('Build'){
-        bat "npm run build --prod"
+        bat "npm run build:prod"
     }
 
     
