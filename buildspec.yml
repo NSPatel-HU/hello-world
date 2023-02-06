@@ -1,10 +1,10 @@
 version: 0.2
 env:
-  secrets-manager:
-    LOGIN: prod/sonar:sonartoken
-    HOST: prod/sonar:HOST
-    Organization: prod/sonar:HU
-    Project: prod/sonar:Project
+  # secrets-manager:
+  #   LOGIN: prod/sonar:sonartoken
+  #   HOST: prod/sonar:HOST
+  #   Organization: prod/sonar:HU
+  #   Project: prod/sonar:Project
   variables:
     APP_NAME: "angular-cicd-pipeline-demo"
 phases:
@@ -25,4 +25,4 @@ phases:
       - echo build process finished, we should uplload to S3 now
       - cd dist/$APP_NAME
       - ls -la
-      - aws s3 sync . s3://my-bucket --delete
+      - aws s3 sync . s3://my-hu-bucket --delete
