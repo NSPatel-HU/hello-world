@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//trigger jenkins pipeline
+//test trigger jenkins pipeline
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
